@@ -8,14 +8,10 @@ int main(void)
 	std::cout << std::endl;
 	DiamondTrap c(a);
 	std::cout << std::endl;
+	// std::cout << "--------" << c.ClapTrap::getName() << std::endl;
 	DiamondTrap d;
 	std::cout << std::endl;
 
-	// std::cout << "b " << b.getName() << std::endl;
-	// std::cout << d.getName() << std::endl;
-	// std::cout << d.getHitPoints() << std::endl;
-	// std::cout << d.getEnergyPoints() << std::endl;
-	// std::cout << d.getAttackDamage() << std::endl;
 	d = b;
 
 	std::cout << std::endl;

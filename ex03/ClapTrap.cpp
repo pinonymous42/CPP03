@@ -19,17 +19,17 @@ ClapTrap::~ClapTrap()
 ClapTrap::ClapTrap(const ClapTrap &claptrap)
 {
 	std::cout << "ClapTrap's copy constructor called" << std::endl;
-	this->_name = claptrap.getName();
-	this->_hit_points = claptrap.getHitPoints();
-	this->_energy_points = claptrap.getEnergyPoints();
-	this->_attack_damage = claptrap.getAttackDamage();
+	this->_name = claptrap._name;
+	this->_hit_points = claptrap._hit_points;
+	this->_energy_points = claptrap._energy_points;
+	this->_attack_damage = claptrap._attack_damage;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap)
 {
 	if (this != &claptrap)
 	{
-		this->_name = claptrap.getName();
+		this->_name = claptrap.ClapTrap::getName();
 		this->_hit_points = claptrap.getHitPoints();
 		this->_energy_points = claptrap.getEnergyPoints();
 		this->_attack_damage = claptrap.getAttackDamage();
@@ -110,6 +110,8 @@ void ClapTrap::setAttackDamage(const unsigned int amount)
 
 std::string ClapTrap::getName(void) const
 {
+	// std::cout << __FILE__ << " " << __LINE__ << std::endl;
+	// std::cout << this->_name << std::endl;
 	return (this->_name);
 }
 

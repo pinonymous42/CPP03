@@ -15,6 +15,7 @@ DiamondTrap::~DiamondTrap()
 
 DiamondTrap::DiamondTrap(const DiamondTrap &diamondtrap):ClapTrap(diamondtrap), FragTrap(diamondtrap), ScavTrap(diamondtrap), _name(diamondtrap.getName())
 {
+	// ClapTrap::setName(ClapTrap::getName() + "_clap_name");
 	std::cout << "DiamondTrap's copy constructor called" << std::endl;
 }
 
@@ -22,8 +23,9 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &diamondtrap)
 {
 	if (this != &diamondtrap)
 	{
-		// ClapTrap::operator=(diamondtrap);
+		ClapTrap::operator=(diamondtrap);
 		this->_name = diamondtrap.getName();
+		// ClapTrap::setName(ClapTrap::getName() + "_clap_name");
 	}
 	return (*this);
 }
